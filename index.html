@@ -5,6 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Animated Sprite</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="sprite.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="orb">
+      <h2>BEHOLD!</h2>
+      <input type="radio" id="run" class="run" name="action" value="run" />
+      <label class="run" for="run"> Run! </label>
+
+      <input type="radio" id="cast" class="cast" name="action" value="cast" />
+      <label class="cast" for="cast"> Magic! </label>
+
+      <input
+        type="radio"
+        id="left"
+        class="left"
+        name="direction"
+        value="left"
+      />
+      <label class="left" for="left"> < </label>
+
+      <input
+        type="radio"
+        id="right"
+        class="right"
+        name="direction"
+        value="right"
+      />
+      <label class="right" for="right">></label>
+
+      <div class="wizard"></div>
+    </div>
+  </body>
 </html>

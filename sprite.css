@@ -1,0 +1,139 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "VT323", monospace;
+}
+
+h2 {
+  color: purple;
+  font-size: 45px;
+  text-align: center;
+  text-shadow: 1px 1px 1px violet;
+}
+
+.orb {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(lightcyan, teal);
+  box-shadow: 50px 150px 60px lightcyan;
+}
+
+.wizard {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 231px;
+  height: 190px;
+  margin: 2em auto;
+  animation: action 1s steps(8) infinite;
+}
+
+input.left,
+input.right,
+label.left,
+label.right,
+label.cast,
+label.run {
+  background: lightsalmon;
+  font-size: 22px;
+  position: aboslute;
+  bottom: -25px;
+  cursor: pointer;
+  z-index: 20;
+  height: 50px;
+}
+
+input.left,
+input.right,
+label.left,
+label.right {
+  width: 50px;
+}
+
+label.left,
+label.right,
+label.cast,
+label.run {
+  text-align: center;
+  padding-block-start: 10px;
+  border: 3px outset lavender;
+  border-radius: 10px;
+}
+
+label.left,
+label.right {
+  font-size: 20px;
+}
+
+input.left,
+label.left {
+  position: absolute;
+  left: 10px;
+}
+
+label.right {
+  position: absolute;
+  right: 10px;
+}
+
+label.run,
+label.cast {
+  position: absolute;
+  padding-block: 7px;
+  width: 30%;
+}
+
+label.run,
+label.cast {
+  right: 35%;
+}
+
+label.run {
+  /* right: 30%; */
+  bottom: -25%;
+}
+
+label.cast {
+  bottom: 0%;
+}
+
+input {
+  display: none;
+}
+
+#cast:checked ~ .cast,
+#run:checked ~ .run,
+#left:checked ~ .left,
+#right:checked ~ .right {
+  background: #ffa07a;
+  outline: 4px dotted turquoise;
+  border: 5px inset black;
+}
+
+#cast:checked ~ .wizard {
+  background: transparent url("attack.png") 0 0 no-repeat;
+}
+
+#run:checked ~ .wizard {
+  background: transparent url("run.png") 0 0 no-repeat;
+}
+
+@keyframes action {
+  100% {
+    background-position: -1848px, 0;
+  }
+}
+
+#left:checked ~ .wizard {
+  transform: translate(-50%, -50%) rotateY(180deg);
+}
