@@ -12,3 +12,8 @@ https://luizmelo.itch.io/wizard-pack
 
 VT323, by Peter Hull. Retrieved via Google Fonts API
 https://fonts.google.com/specimen/VT323#standard-styles
+
+## Icons
+
+Favicon:
+https://www.flaticon.com/free-icon/wizard_2332801#
